@@ -55,8 +55,27 @@ Florian
 DataRobot knows of three types of models, "external" being only one of them.
 
 - Name them (Bonus points for synonyms)
+  - DataRobot Models
+  - Custom Models managed by DataRobot MLOPS
+  - External Models monitored by External agent
+
 - List deployment options for all (Bonus points for being detailed about differences)
+  - DataRobot Models
+    - Can be deployed on DataRobot Prediction servers. (Automatic retraining and humility possible)
+    - Can be exported as Poratable Prediction server and deployed on K8 or docker. (No retraining or humility)
+    - Can be exported as JAR and deployed in a variety of ways. For example:- Embedded in Spark code or deployed as a function on serverless. (No retraining or humility)
+  - Custom Models - These are models developed by Data Scientists using Python or Java and imported into Datarobot MLOPS.
+    - Can be deployed on DataRobot Prediction servers
+    - Can be exported as Poratable Prediction server and deployed on K8 or docker. (No retraining or humility)
+  - External Models (Goverance and humility needs to be implemented by customer)
+    - Customer can use their own deployment process, CI/CD pipeline etc.
+    - Monitoring can be done using MLOPS agent.
+    - Management can be done by MLOPS management agent, but why would anybody do that.
+
+
 - What's the MLOps sales pitch across all of them?
+  - The sales pitch is that we can do it all. One product any deployment scenario.
+
 
 ### Task 2 - Create and store a model locally
 
